@@ -1,17 +1,23 @@
 ---
-title: "rustzen-admin：权限架构设计 - 基于 Axum 的声明式权限系统完整实现"
-description: "构建现代权限系统的完整指南 - 使用 Rust Axum 实现声明式 API、智能缓存和中间件架构的高性能访问控制"
+title: "rustzen-admin：基于 Axum 的声明式权限系统"
+description: "rustzen-admin 使用 Axum、声明式 API、缓存和中间件实现路由级权限控制。"
 pubDate: "2025-06-26"
+lang: "zh"
+translationKey: "permission-design"
+source:
+  repository: "idaibin/blog"
+  commit: "6f79586fc313604089a0ef7d46bf84d500ad86a4"
+  status: "migrated and adapted"
 tags: ["rust", "axum", "permissions", "security"]
 ---
 
-> 本文介绍了一个基于 Rust Axum 框架的现代化权限系统设计与实现，重点展示了如何通过声明式 API、智能缓存和中间件架构构建高性能、可维护的权限控制系统。
+> 本文说明 rustzen-admin 如何通过 Axum、声明式 API、缓存和中间件实现权限控制。
 
 ---
 
 ## 一、引言：为什么要设计一个统一权限系统？
 
-在现代 Web 应用开发中，权限控制是一个不可避免的核心需求。随着业务复杂度的增长，我们面临着以下挑战：
+在 Web 应用开发中，权限控制是核心需求。随着业务复杂度的增长，我们面临着以下挑战：
 
 ### 🔍 传统权限控制的痛点
 
@@ -35,7 +41,7 @@ async fn user_list_handler(current_user: CurrentUser) -> Result<Json<Vec<User>>,
 
 ### 🎯 我们的解决方案
 
-设计一个**集中、声明式、高性能**的权限系统，实现：
+设计一个**集中、声明式**的权限系统，实现：
 
 - ✅ 路由注册时声明权限要求
 - ✅ 中间件统一处理权限校验
@@ -252,7 +258,7 @@ pub async fn get_cached_permissions(
 
 ### 5.1 RouterExt Trait 设计
 
-**核心创新**：扩展 Axum Router，支持权限声明
+**核心做法**：扩展 Axum Router，支持权限声明
 
 ```rust
 pub trait RouterExt<S> {

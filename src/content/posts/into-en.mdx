@@ -1,10 +1,18 @@
 ---
 title: "Rust + React Admin Template with Axum, SQLx and Vite – Open Source"
-description: "A starter template for admin systems built with Rust (Axum) and React, designed for clean architecture and developer productivity."
+description: "A starter template for admin systems built with Rust, Axum, SQLx, React, and Vite."
 pubDate: "2025-06-22"
+lang: "en"
+translationKey: "into"
+source:
+  repository: "idaibin/blog"
+  commit: "6f79586fc313604089a0ef7d46bf84d500ad86a4"
+  status: "migrated and adapted"
 heroImage: ../../assets/blog/into.png
 tags: ["rust", "react", "webdev", "programming"]
 ---
+
+> Historical note: this article records the rustzen-admin template state as of June 22, 2025. Later authentication and permission articles describe subsequent implementation changes.
 
 ## Introducing
 
@@ -20,7 +28,7 @@ Every time I started a new project requiring an admin interface, I found myself:
 - Writing API documentation
 - Organizing project structure
 
-This repetitive setup work inspired me to build a template that provides a solid foundation while demonstrating modern development practices.
+This repetitive setup work inspired me to build a template with the basic pieces already wired together.
 
 ## 🛠️ Technology Stack
 
@@ -108,7 +116,7 @@ This separation makes the code:
 - **Strict type alignment** between frontend and backend
 - **Mock data-driven development** - frontend can develop independently with realistic data
 - **Compile-time safety** - TypeScript and Rust catch errors early
-- **AI-friendly codebase** - clean structure works well with modern development tools
+- **Clear code structure** - organized modules that are easier to inspect and change
 
 ### 📚 Documentation
 
@@ -216,7 +224,7 @@ The project is MIT licensed and open to contributions. Areas where help would be
 
 ## 🎉 Conclusion
 
-rustzen-admin is a starting point for building admin systems with Rust and React. It's not a complete solution but rather a foundation that demonstrates clean architecture patterns, modern tooling integration, and type-safe full-stack development.
+rustzen-admin is a starting point for building admin systems with Rust and React. It is not a complete product; it provides a working structure for APIs, permissions, authentication, and frontend development.
 
 The current version includes mock data endpoints to enable rapid frontend development while the backend architecture is being finalized. This approach allows teams to work in parallel and iterate quickly.
 

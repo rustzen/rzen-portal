@@ -1,0 +1,17 @@
+# rustzen-site Docs
+
+`rustzen-site` is the RustZen public website. It is an Astro static site with MDX content collections and Vercel deployment configuration.
+
+## Docs
+
+- [Architecture](architecture.md): source layout, page ownership, content collections, and generated boundaries.
+- [Deployment](deployment.md): Vercel config, package manager, build output, local-only deployment files, and verification checklist.
+- [Content](content.md): product pages, blog content, screenshots, SEO/media ownership, and update rules.
+- [Current Site Content](current-site-content.md): historical content snapshot captured before the Astro rebuild.
+
+## Current Classification
+
+- Project type: Peripheral Vercel / Astro static site.
+- Does not inherit: `/opt`, systemd, Docker, Rust service release bundle, Web admin `apps/server` + `apps/web`, or Tauri client release rules.
+- Source truth: tracked Astro, content, data, style, public, and docs files.
+- Generated/local-only: `.vercel/`, `.astro/`, `.next/`, `out/`, `dist/`.

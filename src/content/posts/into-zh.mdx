@@ -1,20 +1,28 @@
 ---
 title: "rustzen-admin：Rust + React 管理后台模板"
-description: "使用 Rust 作为后端、React 作为前端的开源管理后台模板，提供用户认证、权限管理、CRUD 操作等基础功能"
+description: "2025-06-22 的 rustzen-admin 模板历史快照，记录当时的 Rust 后端与 React 前端基础能力。"
 pubDate: "2025-06-22"
+lang: "zh"
+translationKey: "into"
+source:
+  repository: "idaibin/blog"
+  commit: "6f79586fc313604089a0ef7d46bf84d500ad86a4"
+  status: "migrated and adapted"
 heroImage: ../../assets/blog/into.png
 tags: ["rust", "react", "webdev", "programming"]
 ---
 
-开发管理后台时，经常需要重复实现相同的功能模式：用户认证、权限管理、CRUD 操作等基础功能。**rustzen-admin** 是一个开源模板，使用 Rust 作为后端、React 作为前端，提供这些基础功能的完整实现。
+> 历史说明：本文记录 2025-06-22 时 rustzen-admin 模板的阶段状态。后续认证和权限文章记录了之后的实现演进，当前状态应以项目源码和后续文章为准。
+
+开发管理后台时，经常需要重复实现相同的功能模式：用户认证、权限管理、CRUD 操作等基础功能。**rustzen-admin** 是一个开源模板，使用 Rust 作为后端、React 作为前端，提供这些基础功能的基础实现。
 
 ## 当前实现功能
 
-这是一个正在开发中的模板项目，以下是目前已经实现的功能：
+这是一个正在开发中的模板项目，以下是当时记录的功能：
 
 ### ✅ 后端 (Rust + Axum + PostgreSQL)
 
-- **用户认证**：基于 JWT 的登录系统，使用 bcrypt 密码加密
+- **用户认证**：当时记录为基于 JWT 的登录系统；密码哈希后续已从 bcrypt 演进到 Argon2
 - **权限控制**：用户、角色、权限的完整管理体系
 - **菜单系统**：支持层级结构的菜单管理和权限控制
 - **操作日志**：基础的操作记录和安全审计功能

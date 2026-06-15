@@ -6,58 +6,45 @@ Date captured: 2026-06-10.
 
 ## Home
 
-Title: Rustzen macOS apps
+Title: RustZen macOS apps
 
-Headline: Local-first productivity tools for macOS.
+Headline: macOS cleanup and clipboard history.
 
-Description: Rustzen builds focused desktop apps for developers and productivity users, starting with safe cleaning and clipboard history.
+Description: RustZen builds macOS tools for developer cache cleanup and local clipboard history.
 
 Primary products:
 
-- Rustzen Clear
-  - Status: Planning paid release
-  - Description: A lightweight macOS cleaner for developer environments. The free edition supports full scanning and disk analysis. Pro unlocks cleanup, configuration, and all operational capabilities.
-  - Path: `/products/clear`
-- Rustzen Clipboard
-  - Status: Early product design
-  - Description: Capture text and image clipboard entries, search recent and pinned items, preview content, and restore selected entries back to the system clipboard.
-  - Path: `/products/clipboard`
+- Zen Clear
+  - Status: Beta
+  - Description: A macOS cleanup tool for developer environments. It scans common cache locations, shows what can be removed, and keeps cleanup decisions explicit.
+  - Path: `/zen-clear`
+- Clipboard
+  - Status: In development
+  - Description: A macOS clipboard history app for text and images. It lets you search recent items, pin useful entries, and restore a selected item to the system clipboard.
+  - Path: `/clipboard`
 
-## Rustzen Clear
+## Zen Clear
 
-Description: A lightweight macOS cleaner for developer environments. The free edition supports full scanning and disk analysis. Pro unlocks cleanup, configuration, and all operational capabilities.
+Description: A macOS cleanup tool for developer environments. It scans common cache locations, shows what can be removed, and keeps cleanup decisions explicit.
 
 Features:
 
-- Full scan and disk analysis in the free edition
-- Cleanup and follow-up operations unlocked by Pro
-- Configuration unlocked by Pro
-- Local-first desktop workflow
-- Designed for Rust, Node.js, Java, Xcode, and IDE caches
+- Scan developer cache and build output locations
+- Preview disk usage before deleting files
+- Choose cleanup scope before running an action
+- Covers Rust, Node.js, Java, Xcode, IDE, Docker, and Homebrew caches
 
-Free entitlement text:
+Note: Cleanup is preview-first: scan results are shown before any deletion runs.
 
-- Full scan is available
-- Disk analysis is available
-- No cleanup, deletion, ignore, export, automation, or other follow-up operations
-- No configuration access
+## Clipboard
 
-Pro entitlement text:
-
-- Unlock all scan and analysis capabilities
-- Unlock cleanup and follow-up operations
-- Unlock all configuration options
-- Unlock all current and future Pro entitlement items for the purchased plan
-
-## Rustzen Clipboard
-
-Description: Capture text and image clipboard entries, search recent and pinned items, preview content, and restore selected entries back to the system clipboard.
+Description: A macOS clipboard history app for text and images. It lets you search recent items, pin useful entries, and restore a selected item to the system clipboard.
 
 Features:
 
 - Text and image clipboard history
-- Local storage by default
+- History stays on the Mac
 - Search recent and pinned entries
 - Delete sensitive or temporary entries
 
-Note: Clipboard content stays local by default. The product is designed around private, on-device history.
+Note: Clipboard history stays on the Mac. RustZen Cloud is not used for clipboard contents or clipboard history.

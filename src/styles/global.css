@@ -58,6 +58,12 @@ a {
   text-decoration: none;
 }
 
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--clipboard-teal) 70%, white);
+  outline-offset: 4px;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -116,6 +122,7 @@ img {
 }
 
 .site-nav a:hover,
+.site-nav a:focus-visible,
 .site-nav a.active {
   color: var(--paper);
   background: linear-gradient(135deg, var(--clear-blue-highlight), var(--clipboard-sage));
@@ -173,6 +180,10 @@ img {
 }
 
 .button:hover {
+  transform: translateY(-1px);
+}
+
+.button:focus-visible {
   transform: translateY(-1px);
 }
 

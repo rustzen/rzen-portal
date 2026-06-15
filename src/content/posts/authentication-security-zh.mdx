@@ -1,17 +1,23 @@
 ---
-title: 'rustzen-admin：认证安全升级 - 从 bcrypt 到 Argon2 的完整迁移'
-description: '详细指南：在 Rust Web 应用中升级密码安全性 - 从 bcrypt 迁移到 Argon2，包含 JWT 中间件实现'
+title: 'rustzen-admin：认证安全升级 - 从 bcrypt 到 Argon2'
+description: 'rustzen-admin 将密码哈希从 bcrypt 迁移到 Argon2，并同步调整 JWT 中间件。'
 pubDate: '2025-06-24'
+lang: 'zh'
+translationKey: 'authentication-security'
+source:
+  repository: 'idaibin/blog'
+  commit: '6f79586fc313604089a0ef7d46bf84d500ad86a4'
+  status: 'migrated and adapted'
 tags: ['rust', 'security', 'authentication', 'webdev']
 ---
 
-> JWT 中间件设计 + Argon2 密码安全 + 完整认证流程实现
+> JWT 中间件设计 + Argon2 密码哈希 + 认证流程实现
 
 ## 🎯 前言：为什么要升级密码安全？
 
-在构建企业级管理系统时，认证安全往往是开发者遇到的第一道防线。然而，许多项目仍然依赖于像 bcrypt 这样的老式密码哈希算法，虽然安全，但可能不代表当前密码安全的最佳实践。
+在构建管理系统时，认证安全往往是开发者遇到的第一道防线。许多项目仍然依赖 bcrypt 这样的旧密码哈希算法，但它不一定符合当前密码安全建议。
 
-在 **rustzen-admin** 项目中，我最近经历了一次全面的认证安全升级。说实话，我最初对从 bcrypt 迁移到 Argon2 是犹豫的——毕竟 bcrypt 工作得很好，为什么要修复没有坏的东西呢？但在深入研究现代密码安全标准并看到一些令人震惊的漏洞报告后，我决定咬咬牙进行升级。
+在 **rustzen-admin** 项目中，我将密码哈希从 bcrypt 迁移到 Argon2。最初我有些犹豫，因为 bcrypt 当时能正常工作；但当前密码安全建议和漏洞报告说明这次迁移有必要。
 
 这篇文章记录了我的整个旅程——研究过程、遇到的实现挑战，以及找到的解决方案。希望能为你节省一些我凌晨 2 点盯着神秘错误消息调试的时间。
 

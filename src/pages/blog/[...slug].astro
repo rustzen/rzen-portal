@@ -13,22 +13,43 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+const posts = await getAllPosts();
+const alternatePost = posts.find(
+  (item) =>
+    item.data.translationKey === post.data.translationKey &&
+    item.data.lang !== post.data.lang,
+);
+const langLabel = post.data.lang === 'zh' ? 'ZH' : 'EN';
+const sourceLabel = `${post.data.source.status} from ${post.data.source.repository}`;
 ---
 
-<SiteLayout title={`${post.data.title} | Rustzen`} description={post.data.description}>
+<SiteLayout title={`${post.data.title} | RustZen`} description={post.data.description}>
   <main class="post-page">
     <article>
       <header class="post-header">
         <a href="/blog" class="back-link">Back to blog</a>
-        <time datetime={post.data.pubDate.toISOString()}>
-          {post.data.pubDate.toLocaleDateString('en', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-          })}
-        </time>
+        <div class="post-meta">
+          <time datetime={post.data.pubDate.toISOString()}>
+            {post.data.pubDate.toLocaleDateString('en', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            })}
+          </time>
+          <span>{langLabel}</span>
+        </div>
         <h1>{post.data.title}</h1>
         <p>{post.data.description}</p>
+        <div class="source-note">
+          <span>{sourceLabel}</span>
+          {
+            alternatePost && (
+              <a href={`/blog/${alternatePost.id}`}>
+                Read {alternatePost.data.lang === 'zh' ? 'Chinese' : 'English'} version
+              </a>
+            )
+          }
+        </div>
       </header>
       <div class="content">
         <Content />
@@ -60,10 +81,21 @@ const { Content } = await render(post);
     font-weight: 700;
   }
 
-  time {
-    display: block;
+  .post-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
     color: var(--copper);
     font-weight: 700;
+  }
+
+  .post-meta span {
+    padding: 3px 8px;
+    color: var(--charcoal);
+    background: rgb(213 173 79 / 0.18);
+    border-radius: 999px;
+    font-size: 0.78rem;
   }
 
   h1 {
@@ -79,6 +111,20 @@ const { Content } = await render(post);
     margin: 0;
     color: var(--muted);
     font-size: 1.2rem;
+  }
+
+  .source-note {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 22px;
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+
+  .source-note a {
+    color: var(--clipboard-teal);
+    border-bottom: 1px solid rgb(15 118 110 / 0.28);
   }
 
   .content {

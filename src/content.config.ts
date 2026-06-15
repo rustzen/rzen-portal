@@ -8,6 +8,13 @@ const posts = defineCollection({
       title: z.string(),
       description: z.string(),
       pubDate: z.coerce.date(),
+      lang: z.enum(['en', 'zh']),
+      translationKey: z.string(),
+      source: z.object({
+        repository: z.string(),
+        commit: z.string(),
+        status: z.string(),
+      }),
       tags: z.array(z.string()).default([]),
       author: z.string().optional(),
       cover: z.string().optional(),

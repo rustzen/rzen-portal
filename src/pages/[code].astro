@@ -18,7 +18,7 @@ if (!tool) {
 const siblingTools = tools.filter((item) => item.code !== tool.code);
 ---
 
-<SiteLayout title={`${tool.name} | Rustzen`} description={tool.description}>
+<SiteLayout title={`${tool.name} | RustZen`} description={tool.description}>
   <main class={`tool-page ${tool.accent}`}>
     <section class="product-hero">
       <div class="product-copy reveal">
@@ -41,7 +41,7 @@ const siblingTools = tools.filter((item) => item.code !== tool.code);
     <section class="product-detail">
       <div>
         <p class="eyebrow">Capabilities</p>
-        <h2>What this tool is built to do.</h2>
+        <h2>What it does.</h2>
       </div>
       <ul>
         {tool.highlights.map((item) => <li>{item}</li>)}
@@ -53,7 +53,7 @@ const siblingTools = tools.filter((item) => item.code !== tool.code);
       {
         siblingTools.map((item) => (
           <a class="button secondary" href={item.href}>
-            View {item.name}
+            Learn about {item.name}
           </a>
         ))
       }

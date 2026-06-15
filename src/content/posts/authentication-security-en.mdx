@@ -1,17 +1,23 @@
 ---
 title: 'rustzen-admin: Authentication Security Upgrade - From bcrypt to Argon2'
-description: 'A comprehensive guide to upgrading password security in Rust web applications - migrating from bcrypt to Argon2 with JWT middleware implementation.'
+description: 'How rustzen-admin migrated password hashing from bcrypt to Argon2 and updated JWT middleware.'
 pubDate: '2025-06-24'
+lang: 'en'
+translationKey: 'authentication-security'
+source:
+  repository: 'idaibin/blog'
+  commit: '6f79586fc313604089a0ef7d46bf84d500ad86a4'
+  status: 'migrated and adapted'
 tags: ['rust', 'security', 'authentication', 'webdev']
 ---
 
-> JWT Middleware Design + Argon2 Password Security + Complete Authentication Flow Implementation
+> JWT middleware design + Argon2 password hashing + authentication flow implementation
 
 ## 🎯 Introduction: Why Upgrade Password Security?
 
-When building enterprise-level management systems, authentication security is often the first line of defense that developers encounter. However, many projects still rely on older password hashing algorithms like bcrypt, which, while secure, may not represent the current best practices for password security.
+When building management systems, authentication security is often the first line of defense that developers encounter. Many projects still rely on older password hashing algorithms like bcrypt, which may not match current password security guidance.
 
-In the **rustzen-admin** project, I recently went through a comprehensive authentication security upgrade. To be honest, I was initially hesitant about migrating from bcrypt to Argon2 - after all, bcrypt was working perfectly fine, so why fix what isn't broken? But after diving deep into modern password security standards and seeing some eye-opening vulnerability reports, I decided to bite the bullet and make the upgrade.
+In the **rustzen-admin** project, I migrated password hashing from bcrypt to Argon2. I was initially hesitant because bcrypt was working, but current password security guidance and vulnerability reports made the change worth doing.
 
 This article documents my entire journey - the research, the implementation challenges I faced, and the solutions I found. I hope it saves you some of the debugging time I spent staring at cryptic error messages at 2 AM.
 

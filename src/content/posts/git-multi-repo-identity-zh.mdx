@@ -1,7 +1,13 @@
 ---
 title: "Git 多仓库用户身份自动切换与隐私保护指南"
-description: "现代开发者必备技能：使用 Git includeIf 功能实现多仓库身份自动切换，支持 HTTPS/SSH 协议，保护个人隐私，告别手动配置的烦恼。从 GitHub 个人项目到公司内网仓库，一套配置解决所有身份管理问题。"
+description: "使用 Git includeIf 按仓库切换 user.name 和 user.email，支持 HTTPS/SSH，并在公开仓库使用 noreply 邮箱。"
 pubDate: "2025-10-09"
+lang: "zh"
+translationKey: "git-multi-repo-identity"
+source:
+  repository: "idaibin/blog"
+  commit: "6f79586fc313604089a0ef7d46bf84d500ad86a4"
+  status: "migrated and adapted"
 tags: ["Git", "配置管理", "多仓库", "开发者工具", "身份管理"]
 author: "idaibin"
 ---
@@ -11,7 +17,7 @@ author: "idaibin"
 - GitHub 个人项目
 - 公司内网 GitLab 或自建 Git 服务器
 
-不同仓库可能需要使用不同的提交身份（user.name / user.email）。此外，为了保护个人隐私，提交到公共仓库时可能希望隐藏真实邮箱。本文将系统讲解如何利用 Git 的 includeIf 功能，实现自动切换用户身份，并支持 HTTPS/SSH，同时隐藏邮箱信息。
+不同仓库可能需要使用不同的提交身份（user.name / user.email）。此外，为了保护个人隐私，提交到公共仓库时可能希望隐藏真实邮箱。本文说明如何利用 Git 的 includeIf 功能自动切换用户身份，并支持 HTTPS/SSH，同时隐藏邮箱信息。
 
 ---
 
