@@ -440,12 +440,12 @@ impl Default for DatabaseConfig {
 
 📎 **本文的所有代码都可在 rustzen-admin 仓库中找到。关键认证模块：**
 
-- [core/password.rs](https://github.com/idaibin/rustzen-admin/blob/main/backend/src/core/password.rs) - Argon2 密码哈希实现
-- [core/jwt.rs](https://github.com/idaibin/rustzen-admin/blob/main/backend/src/core/jwt.rs) - JWT 工具函数
-- [features/auth/service.rs](https://github.com/idaibin/rustzen-admin/blob/main/backend/src/features/auth/service.rs) - 认证业务逻辑
-- [features/auth/middleware.rs](https://github.com/idaibin/rustzen-admin/blob/main/backend/src/features/auth/middleware.rs) - JWT 认证中间件
+- [infra/password.rs](https://github.com/rustzen/rustzen-admin/blob/main/apps/server/src/infra/password.rs) - Argon2 密码哈希实现
+- [crates/auth/src/auth/jwt.rs](https://github.com/rustzen/rustzen-admin/blob/main/crates/auth/src/auth/jwt.rs) - JWT 工具函数
+- [features/auth/service.rs](https://github.com/rustzen/rustzen-admin/blob/main/apps/server/src/features/auth/service.rs) - 认证业务逻辑
+- [crates/auth/src/auth/middleware.rs](https://github.com/rustzen/rustzen-admin/blob/main/crates/auth/src/auth/middleware.rs) - JWT 认证中间件
 
-🔗 **完整源代码**：[GitHub 上的 rustzen-admin](https://github.com/idaibin/rustzen-admin/tree/main/backend)
+🔗 **完整源代码**：[GitHub 上的 rustzen-admin server](https://github.com/rustzen/rustzen-admin/tree/main/apps/server)
 
 🚀 **系列下一篇**：第二部分将深入探讨"企业级 Rust 后端架构：Repository-Service-Routes 三层模式的优雅实现"——我们将探索如何构建可扩展、可维护的后端系统，并适当分离关注点。
 

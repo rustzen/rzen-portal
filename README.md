@@ -25,7 +25,7 @@ RustZen Site is the static official website for RustZen macOS tools.
 ## Development
 
 ```bash
-pnpm install
+pnpm install --frozen-lockfile
 pnpm dev
 ```
 

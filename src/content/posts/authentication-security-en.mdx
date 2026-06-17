@@ -440,12 +440,12 @@ I'm already thinking about the next improvements:
 
 📎 **All code from this article is available in the rustzen-admin repository. Key authentication modules:**
 
-- [core/password.rs](https://github.com/idaibin/rustzen-admin/blob/main/backend/src/core/password.rs) - Argon2 password hashing implementation
-- [core/jwt.rs](https://github.com/idaibin/rustzen-admin/blob/main/backend/src/core/jwt.rs) - JWT utility functions
-- [features/auth/service.rs](https://github.com/idaibin/rustzen-admin/blob/main/backend/src/features/auth/service.rs) - Authentication business logic
-- [features/auth/middleware.rs](https://github.com/idaibin/rustzen-admin/blob/main/backend/src/features/auth/middleware.rs) - JWT authentication middleware
+- [infra/password.rs](https://github.com/rustzen/rustzen-admin/blob/main/apps/server/src/infra/password.rs) - Argon2 password hashing implementation
+- [crates/auth/src/auth/jwt.rs](https://github.com/rustzen/rustzen-admin/blob/main/crates/auth/src/auth/jwt.rs) - JWT utility functions
+- [features/auth/service.rs](https://github.com/rustzen/rustzen-admin/blob/main/apps/server/src/features/auth/service.rs) - Authentication business logic
+- [crates/auth/src/auth/middleware.rs](https://github.com/rustzen/rustzen-admin/blob/main/crates/auth/src/auth/middleware.rs) - JWT authentication middleware
 
-🔗 **Complete Source Code**: [rustzen-admin on GitHub](https://github.com/idaibin/rustzen-admin/tree/main/backend)
+🔗 **Complete Source Code**: [rustzen-admin server on GitHub](https://github.com/rustzen/rustzen-admin/tree/main/apps/server)
 
 🚀 **Next in Series**: Part 2 will dive into "Enterprise-Level Rust Backend Architecture: Elegant Implementation of Repository-Service-Routes Three-Tier Pattern" - where we'll explore how to build scalable, maintainable backend systems with proper separation of concerns.
 

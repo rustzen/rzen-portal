@@ -55,6 +55,10 @@ The `posts` collection is loaded from `src/content/posts/**/*.{md,mdx}`. Frontma
 
 ## Boundaries
 
+The site has no frontend/backend API contract in this repository. Pages are
+pre-rendered from `src/pages`, `src/data/tools.ts`, and the `posts` content
+collection during the Astro static build.
+
 Do not introduce Rust service deployment assumptions here:
 
 - no `/opt/rustzen-site`;
