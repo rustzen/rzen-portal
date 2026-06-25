@@ -8,16 +8,8 @@ interface Props {
 
 const {
   title = 'RustZen',
-  description = 'macOS tools for developer cleanup and clipboard history.',
+  description = 'Zen Clear — a native macOS cleanup app for developers.',
 } = Astro.props;
-
-const navItems = [
-  { href: '/zen-clear', label: 'Zen Clear' },
-  { href: '/clipboard', label: 'Clipboard' },
-  { href: '/blog', label: 'Blog' },
-];
-
-const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
 ---
 
 <!doctype html>
@@ -35,26 +27,10 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
         <img class="brand-mark" src="/rustzen-mark.svg" alt="" width="32" height="32" />
         <span class="brand-word">RustZen</span>
       </a>
-      <nav class="site-nav" aria-label="Primary navigation">
-        {
-          navItems.map((item) => (
-            <a
-              href={item.href}
-              class:list={{
-                active:
-                  currentPath === item.href || currentPath.startsWith(`${item.href}/`),
-              }}
-            >
-              {item.label}
-            </a>
-          ))
-        }
-      </nav>
     </header>
     <slot />
     <footer class="site-footer">
-      <p>RustZen builds Zen Clear and Clipboard for local macOS work.</p>
-      <a href="/blog">Read the blog</a>
+      <p>RustZen builds Zen Clear for local macOS work.</p>
     </footer>
   </body>
 </html>

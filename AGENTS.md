@@ -9,7 +9,7 @@ Use this guide for work inside `/Users/daibin/Projects/repo-github/app`. The Git
 ## Project Type
 
 - Type: RustZen product site / Vercel / Astro static site.
-- Source framework: Astro with MDX content collections.
+- Source framework: Astro.
 - Source truth: tracked files in this repository.
 - Static output: `dist/`.
 - Local-only/generated directories: `.vercel/`, `.astro/`, `.next/`, `out/`, `dist/`.
@@ -28,7 +28,7 @@ Do not apply Rust service, Web admin, systemd, Docker, `/opt/rustzen-*`, Tauri, 
 
 1. Run `git status --short --branch` before edits, builds, tests, deploy checks, or commits.
 2. Protect existing content and design edits. Several site pages and content files may be dirty during active copy/design work.
-3. Read only the files needed for the request: named files first, then `package.json`, `astro.config.mjs`, `vercel.json`, `src/content.config.ts`, and relevant files under `src/pages`, `src/content`, `src/data`, or `docs`.
+3. Read only the files needed for the request: named files first, then `package.json`, `astro.config.mjs`, `vercel.json`, and relevant files under `src/pages`, `src/data`, `src/layouts`, or `docs`.
 4. Treat `.vercel/project.json` as local-only deployment context. Do not describe it as committed deployment truth.
 5. Use real scripts from `package.json`; do not invent validation commands.
 
@@ -52,7 +52,7 @@ Vercel config currently specifies:
 - `docs/README.md` routes site governance docs.
 - `docs/architecture.md` records the Astro/source layout.
 - `docs/deployment.md` records Vercel and generated/local-only boundaries.
-- `docs/content.md` records product pages, blog content, SEO/media ownership, and content update rules.
+- `docs/content.md` records product pages, SEO/media ownership, and content update rules.
 - `docs/current-site-content.md` is a captured content snapshot, not a replacement for live source files.
 
 ## Review Notes
