@@ -38,9 +38,16 @@ The site currently represents:
   checkout success copy, and Rustzen Cloud checkout assumptions aligned.
 - Current public feature boundary: scanning, cleanup preview, macOS permission
   setup, automatic update checks, and manual update checks do not require a
-  license. Pro unlocks cleanup, Restore Center, development scan settings
-  (scan folders and exclusions), custom rules, scheduled scans, and up to three
+  license. Pro unlocks cleanup, Restore Center, advanced scan rules,
+  exclusions, custom rules, scheduled scans, and up to three
   activated devices.
+- Public cleanup wording must say default cleanup moves recoverable items into
+  Zen Clear Restore Center. Do not describe the default action as direct
+  deletion or macOS Trash. Permanent deletion is explicit from Restore Center
+  or an explicit permanent-delete mode.
+- Restore Center copy must mention that retained items remain until restored or
+  manually permanently deleted, and that Restore Center storage is surfaced in
+  disk analysis so it does not become invisible growth.
 
 ## SEO And Metadata
 
@@ -54,11 +61,14 @@ Before adding SEO features such as Open Graph images, canonical URLs, redirects,
 - Zen Clear product media is based on a real Tauri GUI window screenshot stored
   at `public/products/zen-clear-gui-screenshot.png`, then composed into
   `public/products/zen-clear-product.png` for site and Creem product-page use.
-  Use `public/products/zen-clear-creem-cover.png` for the Creem checkout media:
-  it is a checkout-specific cover with reduced whitespace, current GUI media,
-  and concise Pro purchase points.
+  Use `public/products/zen-clear-creem-cover.png` for the Creem checkout media;
+  it should stay visually aligned with `zen-clear-product.png` and must not
+  introduce a separate dark/light product screenshot.
   Keep it aligned with the current Zen Clear app rather than older
   `Disk Cleaner Pro` concept screens.
+- Real GUI media should come from the `rustzen-clear` Tauri development app
+  launched with `just dev-gui`; use CGWindowID window screenshots rather than a
+  browser preview or `/Applications/ZenClear.app`.
 - Screenshots used as docs evidence belong under `docs/screenshots/`.
 - New product media should be reviewed for route usage, alt text, file size, and whether it is tracked or still untracked.
 

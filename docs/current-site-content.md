@@ -4,6 +4,9 @@ Source: local Next.js files in this repository before the Astro rebuild.
 
 Date captured: 2026-06-10.
 
+Status: Historical source snapshot. Use `src/data/product.ts` and current
+tracked Astro pages as the product copy source of truth.
+
 ## Home
 
 Title: Rustzen macOS apps
@@ -16,7 +19,7 @@ Primary products:
 
 - Zen Clear
   - Status: Beta
-  - Description: A macOS cleanup tool for developer environments. It scans common cache locations, shows what can be removed, and keeps cleanup decisions explicit.
+  - Description: A native macOS cleanup app for developer environments. It scans development caches, build outputs, AI tool state, Docker, Xcode, IDE residue, and local development files, then explains what can be cleaned before any action runs.
   - Path: `/zen-clear`
 - Clipboard
   - Status: In development
@@ -25,16 +28,17 @@ Primary products:
 
 ## Zen Clear
 
-Description: A macOS cleanup tool for developer environments. It scans common cache locations, shows what can be removed, and keeps cleanup decisions explicit.
+Description: A native macOS cleanup app for developer environments. It scans development caches, build outputs, AI tool state, Docker, Xcode, IDE residue, and local development files, then explains what can be cleaned before any action runs.
 
 Features:
 
-- Scan developer cache and build output locations
-- Preview disk usage before deleting files
-- Choose cleanup scope before running an action
-- Covers Rust, Node.js, Java, Xcode, IDE, Docker, and Homebrew caches
+- Scan developer cache and build output locations across package managers, IDEs, Docker, Xcode, Homebrew, AI tools, and system cache
+- Preview cleanup scope and risk before an action runs
+- Default cleanup moves recoverable items into Zen Clear Restore Center, not macOS Trash or direct permanent deletion
+- Restore or manually permanently delete retained Restore Center entries
+- Surface Restore Center storage in disk analysis so retained cleanup items stay visible
 
-Note: Cleanup is preview-first: scan results are shown before any deletion runs.
+Note: Cleanup is preview-first. Scanning, preview, macOS permission setup, and update checks do not require a license; Pro unlocks cleanup, Restore Center, scan rules, custom rules, scheduled scans, and up to 3 devices.
 
 ## Clipboard
 

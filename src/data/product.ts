@@ -24,7 +24,7 @@ export const product = {
     price: '$10/year',
     deviceLimit: 'up to 3 devices',
     free: 'Free scan, preview, permissions & updates',
-    pro: 'Pro unlocks cleanup and dev scan settings',
+    pro: 'Pro unlocks cleanup, Restore Center, scan rules & scheduled scans',
   },
   download: {
     label: 'Download for macOS',
@@ -36,7 +36,7 @@ export const product = {
     'Native macOS window with source-list navigation, result tables, and an item inspector',
     'Scan developer cache and build output locations across package managers, IDEs, Docker, Xcode, and AI tools',
     'Risk-grade every finding as Safe, Review, or High risk before cleanup',
-    'Preview cleanup scope, keep actions explicit, and manage recoverable changes in Restore Center',
+    'Preview cleanup scope, move recoverable changes into Zen Clear Restore Center by default, and keep permanent deletion explicit',
     'Surface Restore Center storage in disk analysis so retained cleanup items stay visible',
   ],
   // Feature grid (2x2) — bilingual.
@@ -129,8 +129,8 @@ export const product = {
       n: '03',
       title: 'Preview, confirm, restore or delete',
       titleZh: '预览、确认、恢复或删除',
-      body: 'See exactly what will be cleaned before anything runs, then restore or permanently remove retained items in Restore Center.',
-      bodyZh: '在任何清理发生前看清范围，再到恢复中心恢复或永久移除保留项目。',
+      body: 'See exactly what will be cleaned before anything runs. Default cleanup goes to Zen Clear Restore Center, where you can restore items or permanently remove them later.',
+      bodyZh: '在任何清理发生前看清范围。默认清理会进入 Zen Clear 恢复中心，你可以之后恢复或永久移除。',
     },
   ],
   // Pricing teaser — Free vs Pro.
@@ -174,7 +174,7 @@ export const product = {
         'Everything in Free',
         'One-click cleanup',
         'Restore Center with manual delete',
-        'Development scan settings',
+        'Scan rules and exclusions',
         'Custom rules and scheduled scans',
         'Up to 3 devices',
         'Priority support',
@@ -183,7 +183,7 @@ export const product = {
         '包含免费版全部',
         '一键清理',
         '恢复中心与手动删除',
-        '开发扫描设置',
+        '扫描规则与排除策略',
         '自定义规则与定时扫描',
         '最多 3 台设备',
         '优先支持',
@@ -201,8 +201,8 @@ export const product = {
     {
       q: 'Is Zen Clear safe? Will it delete something important?',
       qZh: 'Zen Clear 安全吗？会删掉重要数据吗？',
-      a: 'Cleanup is preview-first. Nothing is removed until you confirm, and every item is risk-graded. Recoverable changes route through Restore Center, where you can restore them or permanently delete selected entries.',
-      aZh: '清理是预览优先的：在你确认之前不会移除任何内容，且每项数据都有风险分级。可恢复的变更会进入恢复中心，你可以恢复，也可以永久删除所选条目。',
+      a: 'Cleanup is preview-first. Nothing is removed until you confirm, and every item is risk-graded. Default cleanup moves recoverable changes into Zen Clear Restore Center, not macOS Trash or direct permanent deletion. From there, you can restore items or permanently delete selected entries.',
+      aZh: '清理是预览优先的：在你确认之前不会移除任何内容，且每项数据都有风险分级。默认清理会把可恢复的变更移入 Zen Clear 恢复中心，不进入 macOS 废纸篓，也不是直接永久删除。之后你可以恢复，也可以永久删除所选条目。',
     },
     {
       q: 'Which macOS versions are supported?',
@@ -213,8 +213,8 @@ export const product = {
     {
       q: 'Will Restore Center keep growing?',
       qZh: '恢复中心会一直变大吗？',
-      a: 'Restore Center keeps recoverable cleanup items until you restore or permanently delete them. Zen Clear surfaces Restore Center storage in disk analysis so retained items are visible.',
-      aZh: '恢复中心会保留可恢复清理项目，直到你恢复或永久删除。Zen Clear 会在磁盘分析中显示恢复中心占用，让保留项目保持可见。',
+      a: 'Restore Center keeps recoverable cleanup items until you restore or permanently delete them. Zen Clear surfaces Restore Center storage in disk analysis so retained items are visible instead of silently growing forever.',
+      aZh: '恢复中心会保留可恢复清理项目，直到你恢复或永久删除。Zen Clear 会在磁盘分析中显示恢复中心占用，让保留项目保持可见，避免无声膨胀。',
     },
     {
       q: 'What does the scan cover?',
@@ -225,8 +225,8 @@ export const product = {
     {
       q: 'Do permissions or updates require Pro?',
       qZh: '权限和自动更新需要 Pro 吗？',
-      a: 'No. macOS disk and folder permission setup, automatic update checks, and manual update checks are available without a license. Pro is required for development scan settings such as scan folders and exclusions.',
-      aZh: '不需要。macOS 磁盘与文件夹权限设置、自动检查更新和手动检查更新都无需授权。扫描目录、排除目录和排除文件等开发扫描设置需要 Pro。',
+      a: 'No. macOS disk and folder permission setup, automatic update checks, and manual update checks are available without a license. Pro is required for advanced scan configuration such as rules, exclusions, custom rules, and scheduled scans.',
+      aZh: '不需要。macOS 磁盘与文件夹权限设置、自动检查更新和手动检查更新都无需授权。扫描规则、排除策略、自定义规则和定时扫描等高级扫描配置需要 Pro。',
     },
     {
       q: 'How does Pro billing work?',

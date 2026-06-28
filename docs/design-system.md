@@ -204,14 +204,14 @@ Header layout (desktop):
 |---|---|---|
 | Hero eyebrow | Native macOS cleaner for developers | 为开发者打造的原生 macOS 清理工具 |
 | Hero H1 | Reclaim disk space you can't see. | 找回你看不见的磁盘空间。 |
-| Hero sub | Zen Clear scans dev caches, build output, AI tool state, and local development residue — and explains what's safe to delete before anything runs. | Zen Clear 扫描开发缓存、构建产物、AI 工具数据与本地开发残留，并在任何删除之前告诉你什么是安全的。 |
+| Hero sub | Zen Clear scans dev caches, build output, AI tool state, and local development residue — and explains what can be cleaned before anything runs. | Zen Clear 扫描开发缓存、构建产物、AI 工具数据与本地开发残留，并在任何清理动作之前告诉你什么可以安全处理。 |
 | CTA primary | Download for macOS | 下载 macOS 版 |
 | CTA secondary | Get Pro — $10/year | 升级 Pro — $10/年 |
 | Trust line | Beta · macOS 13+ · Universal · Restorable | Beta · macOS 13+ · 通用 · 可恢复 |
 | Problem title | Your Mac fills up with dev data you can't see | 你的 Mac 正被看不见的开发数据占满 |
 | Step 1 | Scan every dev cache & build output | 扫描全部开发缓存与构建产物 |
 | Step 2 | Risk-grade each finding | 为每项结果评级 |
-| Step 3 | Preview, confirm, restore anytime | 预览、确认、随时恢复 |
+| Step 3 | Preview, confirm, restore or delete | 预览、确认、恢复或删除 |
 | Feature · scan | Development-aware scan | 开发环境感知扫描 |
 | Feature · project | Project-centric analysis | 以项目为中心的分析 |
 | Feature · safety | Safety levels | 安全分级 |
@@ -220,7 +220,7 @@ Header layout (desktop):
 | Safety · caution | May affect local workflow — review first | 可能影响本地工作流，请先确认 |
 | Safety · danger | Potentially important — not selected by default | 可能是重要数据，默认不选中 |
 | Pricing free | Free (Beta) | 免费（Beta） |
-| Pricing pro | Pro — $10/year | Pro — $10/年 |
+| Pricing pro | Pro — $10/year · cleanup, Restore Center, scan rules, scheduled scans, up to 3 devices | Pro — $10/年 · 清理、恢复中心、扫描规则、定时扫描、最多 3 台设备 |
 | Final CTA | Start reclaiming space | 开始找回磁盘空间 |
 
 ### 4.4 Hero visual
@@ -244,5 +244,4 @@ uses `--ambient-a`/`--ambient-b` behind the frame.
 
 All phases shipped. Remaining polish (not blocking): path-based `/zh` route
 mirroring (current i18n is robust client-side with `html lang` seeded pre-paint);
-wire `/changelog` to the live cloud `/api/versions` endpoint; homepage
-screenshots refresh from the latest GUI build.
+wire `/changelog` to the live cloud `/api/versions` endpoint.
