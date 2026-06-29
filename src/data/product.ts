@@ -8,14 +8,14 @@ export const product = {
   description:
     'A native macOS disk cleanup app for developers. It scans package caches, build outputs, AI tool state, and local development residue, then explains what can be cleaned before any action runs.',
   descriptionZh:
-    'Zen Clear 扫描开发缓存、构建产物、AI 工具数据与本地开发残留，并在任何删除动作之前，告诉你什么是可以安全清理的。',
+    'Zen Clear 扫描开发缓存、构建产物、AI 工具数据与本地开发残留，并在任何清理动作之前，告诉你什么是可以安全清理的。',
   trust: 'Beta · macOS 13+ · Universal · Restorable',
   trustZh: 'Beta · macOS 13+ · 通用 · 可恢复',
   status: 'Beta',
   accent: 'clear',
   image: {
     src: '/products/zen-clear-product.png',
-    alt: 'Zen Clear native macOS GUI screenshot showing available disk space and cache scan categories',
+    alt: 'Zen Clear native macOS GUI screenshot showing scan results and Restore Center cleanup policy',
   },
   purchase: {
     label: 'Get Pro — $10/year',
@@ -35,7 +35,7 @@ export const product = {
   highlights: [
     'Native macOS window with source-list navigation, result tables, and an item inspector',
     'Scan developer cache and build output locations across package managers, IDEs, Docker, Xcode, and AI tools',
-    'Risk-grade every finding as Safe, Review, or High risk before cleanup',
+    'Risk-grade every finding as Safe, Caution, or Danger before cleanup',
     'Preview cleanup scope, move recoverable changes into Zen Clear Restore Center by default, and keep permanent deletion explicit',
     'Surface Restore Center storage in disk analysis so retained cleanup items stay visible',
   ],
@@ -241,5 +241,5 @@ export const product = {
   finalBody: 'Download Zen Clear and see exactly what is eating your developer disk — in minutes.',
   finalBodyZh: '下载 Zen Clear，几分钟内看清是什么占满了你的开发磁盘。',
   proof:
-    'Cleanup is preview-first: scan results and explanations are shown before any deletion runs.',
+    'Cleanup is preview-first: scan results and explanations are shown before any cleanup runs.',
 } as const;
