@@ -1,5 +1,9 @@
 # Rustzen Site
 
+> Migrated to [`rustzen/rustzen-hub`](https://github.com/rustzen/rustzen-hub) under `apps/site`.
+> This repository is now a legacy source snapshot. Make new website changes in
+> `rustzen-hub/apps/site`.
+
 Rustzen Site is the static official website for the Rustzen macOS tool Zen Clear.
 
 ## Scope
@@ -12,8 +16,8 @@ Rustzen Site is the static official website for the Rustzen macOS tool Zen Clear
 
 - **Zen Clear**: a lightweight macOS cleaner for developer environments. Pro is
   sold as a Creem annual subscription at $10/year.
-- The public download button points at Rustzen Platform's stable latest download
-  resolver.
+- The public download button now points at the Rustzen console API's stable
+  latest download resolver.
 
 ## Stack
 
